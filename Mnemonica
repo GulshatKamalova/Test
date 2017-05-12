@@ -1,0 +1,30 @@
+enum class Color {RED, ORANGE, YELLOW, GREEN, BLUE, INDIGO, VIOLET} 
+
+fun Mnemonica(color: Color) = 
+when (color) { 
+Color.RED -> "Richard" 
+Color.ORANGE -> "Of" 
+Color.YELLOW -> "York" 
+Color.GREEN -> "Gave" 
+Color.BLUE -> "Battle" 
+Color.INDIGO -> "In" 
+Color.VIOLET -> "Vain" 
+} 
+
+fun mixcolor(c1: Color, c2: Color) = 
+when (setOf(c1, c2)) { 
+setOf(Color.RED, Color.YELLOW) -> Color.ORANGE 
+setOf(Color.YELLOW, Color.BLUE) -> Color.GREEN 
+setOf(Color.BLUE, Color.VIOLET) -> Color.INDIGO 
+else -> throw Exception("Don't mix") 
+} 
+
+fun main(args: Array<String>) { 
+println(Mnemonica(Color.VIOLET)) 
+println(mixcolor(Color.YELLOW,Color.BLUE)) 
+}
+
+fun main(args: Array<String>) { 
+println(Mnemonica(Color.VIOLET)) 
+println(mixcolor(Color.YELLOW,Color.BLUE)) 
+}
