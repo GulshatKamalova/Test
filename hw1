@@ -1,0 +1,16 @@
+fun main(args: Array<String>){
+    for(d in args){
+        try {
+            val a = fff(d)
+            println(a)
+        }
+        catch (e: NumberFormatException){
+            println(e)
+        }
+    }
+}
+
+fun  fff(d: String): Int {
+    val al = d.toInt()
+    return al
+}
